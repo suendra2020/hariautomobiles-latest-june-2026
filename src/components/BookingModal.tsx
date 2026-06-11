@@ -451,7 +451,7 @@ Thank you so much! Please confirm my pickup driver arrival.`;
               type="submit"
               id="confirm-booking-submit"
               disabled={isSubmitting}
-              className={`mt-6 flex w-full items-center justify-center gap-1.5 rounded-xl py-3.5 font-sans text-sm font-extrabold text-slate-950 shadow-lg shadow-amber-500/20 transition cursor-pointer ${
+              className={`mt-6 flex w-full items-center justify-center gap-1.5 rounded-xl py-3.5 font-sans text-sm font-extrabold text-white-950 shadow-lg shadow-amber-500/20 transition cursor-pointer ${
                 isSubmitting 
                   ? "bg-amber-600/70 text-slate-800 cursor-not-allowed" 
                   : "bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500"
