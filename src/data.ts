@@ -555,7 +555,7 @@ export const SEO_DATA = {
   phone: "+91 89711 94430",
   phoneDisplay: "089711 94430",
   whatsapp: "+918971194430",
-  email: "service@hariautomobiles.com",
+  email: "hariautomobilesservice@gmail.com",
   hours: "Monday - Saturday: 9:00 AM - 7:00 PM | Sunday: Closed (Emergency Support Active)",
   mapsEmbed: "https://maps.google.com/maps?q=Hari%20Automobiles,%20St,Antony's%20road,%20Kada%20Agrahara%20Main%20Rd,%20opp.%20TimberLand%20creation,%20Lovedale,%20Anagalapura,%20Karnataka%20560077&t=&z=16&ie=UTF8&iwloc=&output=embed"
 };
