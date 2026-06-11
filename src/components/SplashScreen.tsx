@@ -37,7 +37,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
     // 3. Initiate dismissal transition
     const phase3Timer = setTimeout(() => {
       setAnimationPhase("exit");
-    }, 2100);
+    }, 2550);
 
     // 4. Complete fully
     const completeTimer = setTimeout(() => {
@@ -115,7 +115,8 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
 
           {/* Centerpiece Branding Logo inside the ring */}
           <div className="absolute inset-8 flex items-center justify-center z-10 transition-transform duration-500 scale-102 group">
-            <HariLogo className="h-40 w-auto" showSlogan={false} lightText={true} />
+            {/* <HariLogo className="h-40 w-auto" showSlogan={false} lightText={true} /> */}
+            <img src="../src/assets/images/hari-light.png" alt="Hari Automobiles Logo" className="h-40 w-auto splash-logo" />
           </div>
         </div>
 
