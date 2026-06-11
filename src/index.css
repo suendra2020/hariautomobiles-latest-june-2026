@@ -1,0 +1,395 @@
+@import "tailwindcss";
+
+@theme {
+  --color-amber-400: #e11d48; /* Crimson / rose-600 */
+  --color-amber-500: #e11d48; /* Crimson / rose-600 */
+  --color-amber-600: #9f1239; /* Deep Crimson / rose-800 */
+  --color-amber-300: #f43f5e; /* Rose-500 */
+  --color-amber-950: #4c0519; /* dark rose */
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  105% {
+    /* Slightly over to prevent rendering gaps on wide displays */
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 45s linear infinite;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marquee-right 45s linear infinite;
+}
+
+.animate-marquee-left:hover,
+.animate-marquee-right:hover {
+  animation-play-state: paused;
+}
+
+/* ==========================================
+   Hari Automobiles — Light Theme Overrides
+   ========================================== */
+.light-theme {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+}
+
+/* Page sections & containers */
+.light-theme section,
+.light-theme main,
+.light-theme footer,
+.light-theme header,
+.light-theme #site-header,
+.light-theme #site-footer,
+.light-theme .bg-slate-950,
+.light-theme .bg-black,
+.light-theme .bg-zinc-950,
+.light-theme .bg-slate-950\/90,
+.light-theme .bg-slate-950\/98 {
+  background-color: #ffffff !important;
+}
+
+.light-theme .bg-slate-900,
+.light-theme .bg-zinc-900,
+.light-theme .bg-slate-900\/60,
+.light-theme .bg-slate-900\/40,
+.light-theme .bg-slate-900\/50,
+.light-theme .bg-slate-950\/50,
+.light-theme .bg-slate-800,
+.light-theme .bg-slate-800\/40,
+.light-theme .bg-slate-800\/50 {
+  background-color: #f8fafc !important; /* light slate-50 background for card contrast */
+}
+
+/* Border lines override */
+.light-theme .border-slate-800,
+.light-theme .border-slate-900,
+.light-theme .border-slate-705,
+.light-theme .border-slate-700,
+.light-theme .border-zinc-805,
+.light-theme .border-zinc-800 {
+  border-color: #e2e8f0 !important; /* border-slate-200 */
+}
+
+/* Typography elements */
+.light-theme .text-slate-100,
+.light-theme .text-zinc-100,
+.light-theme .text-white {
+  color: #0f172a !important; /* primary slate-900 text */
+}
+
+.light-theme .text-slate-300,
+.light-theme .text-slate-320,
+.light-theme .text-slate-450,
+.light-theme .text-slate-350,
+.light-theme .text-zinc-300 {
+  color: #334155 !important; /* secondary slate-700 text */
+}
+
+.light-theme .text-slate-400,
+.light-theme .text-slate-500,
+.light-theme .text-zinc-400 {
+  color: #475569 !important; /* slate-600 */
+}
+
+.light-theme .text-slate-500,
+.light-theme .text-slate-600,
+.light-theme .text-zinc-500 {
+  color: #64748b !important; /* slate-500 */
+}
+
+/* Accents and buttons security rules */
+.light-theme .bg-\[\#e11d48\],
+.light-theme .bg-rose-600,
+.light-theme .bg-red-600,
+.light-theme .bg-red-650 {
+  background-color: #e11d48 !important;
+}
+
+/* White text inside buttons/badges must NOT turn black */
+.light-theme .bg-\[\#e11d48\] *,
+.light-theme .bg-\[\#e11d48\] span,
+.light-theme .bg-\[\#e11d48\],
+.light-theme .bg-rose-605 *,
+.light-theme .bg-rose-605,
+.light-theme .bg-rose-600 *,
+.light-theme .bg-rose-500 *,
+.light-theme .btn-white-text {
+  color: #ffffff !important;
+}
+
+/* Ensure the WhatsApp brand elements stay authentic green (#25D366) in light mode */
+.light-theme .bg-\[\#25D366\],
+.light-theme #floating-whatsapp-btn {
+  background-color: #25D366 !important;
+  color: #ffffff !important;
+}
+.light-theme #floating-whatsapp-btn:hover {
+  background-color: #20ba5a !important;
+}
+
+/* Ensure quick scheduler button looks amazing inside light mode */
+.light-theme #floating-quick-book-btn {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+  border-color: #334155 !important;
+}
+.light-theme #floating-quick-book-btn:hover {
+  color: #f43f5e !important;
+}
+
+/* Explicit form elements override */
+.light-theme input,
+.light-theme textarea,
+.light-theme select {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light-theme input::placeholder,
+.light-theme textarea::placeholder {
+  color: #94a3b8 !important; /* light placeholder */
+}
+
+.light-theme input:focus,
+.light-theme textarea:focus,
+.light-theme select:focus {
+  border-color: #e11d48 !important;
+}
+
+/* Specific elements inside the Hero section */
+.light-theme #hero-section {
+  background-color: #ffffff !important;
+}
+
+.light-theme #hero-section h1 {
+  color: #0f172a !important;
+}
+
+.light-theme #hero-section p {
+  color: #334155 !important;
+}
+
+/* Change the backdrop blur overlays for positive-contrast presentation */
+.light-theme #hero-section .bg-rose-950\/30 {
+  background-color: rgba(225, 29, 72, 0.08) !important;
+  border-color: rgba(225, 29, 72, 0.15) !important;
+}
+
+/* Clear the dark gradients that block the white backgrounds */
+.light-theme #hero-section .bg-gradient-to-t,
+.light-theme #hero-section .bg-gradient-to-r {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+.light-theme #hero-section .from-slate-950,
+.light-theme #hero-section .via-slate-950\/95,
+.light-theme #hero-section .to-slate-950\/80,
+.light-theme #hero-section .to-slate-950\/40 {
+  --tw-gradient-from: transparent !important;
+  --tw-gradient-to: transparent !important;
+  --tw-gradient-stops: transparent, transparent !important;
+}
+
+.light-theme #hero-section .absolute.inset-0.z-0 {
+  background-color: #f8fafc !important; /* soft white-gray canvas */
+}
+
+/* Elegant light layout washing out the video slightly so overlay elements are completely legible */
+.light-theme #hero-section .absolute.inset-0.z-0::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(to top, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.85) 60%, rgba(255,255,255,0.94) 100%) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+.light-theme #hero-section video {
+  opacity: 0.16 !important;
+  filter: grayscale(1) brightness(1.1) contrast(1);
+}
+
+/* Correct contrast for statistics panel in light view */
+.light-theme #hero-section .text-2xl.font-black,
+.light-theme #hero-section .text-white {
+  color: #0f172a !important; /* extreme dark blue-slate color */
+}
+
+.light-theme #hero-section .text-slate-400,
+.light-theme #hero-section .text-slate-300 {
+  color: #475569 !important; /* slate-600 */
+}
+
+/* Ensure secondary WhatsApp button inside hero is properly styled in light-theme */
+.light-theme #hero-section #hero-whatsapp-btn {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+.light-theme #hero-section #hero-whatsapp-btn:hover {
+  background-color: #f8fafc !important;
+  border-color: #94a3b8 !important;
+}
+
+/* Fix Media Switcher inside light theme hero */
+.light-theme #hero-section .bg-slate-900\/60 {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light-theme #hero-section .bg-slate-900 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light-theme #hero-section .text-slate-400 {
+  color: #475569 !important;
+}
+
+.light-theme .border-slate-850 {
+  border-color: #cbd5e1 !important;
+}
+
+.light-theme .bg-slate-950\/90 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light-theme .bg-slate-950\/50,
+.light-theme .bg-slate-950\/20 {
+  background-color: #f1f5f9 !important;
+}
+
+.light-theme ul li,
+.light-theme ol li {
+  color: #334155 !important;
+}
+
+.light-theme .bg-slate-900\/60 * {
+  border-color: #cbd5e1 !important;
+}
+
+/* Google Trust & Dynamic Counters Section Override for Light Theme */
+.light-theme #google-trust-milestones {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+}
+
+.light-theme #google-trust-milestones .bg-slate-950 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05) !important;
+}
+
+.light-theme #google-trust-milestones h3 {
+  color: #0f172a !important;
+}
+
+.light-theme #google-trust-milestones .text-white {
+  color: #0f172a !important;
+}
+
+.light-theme #google-trust-milestones .text-slate-400 {
+  color: #475569 !important;
+}
+
+.light-theme #google-trust-milestones .bg-slate-900 {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+.light-theme #google-trust-milestones .bg-slate-950\/40 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Light Theme overrides for the Wash & Detailing Pricing Catalog */
+.light-theme #pricing-wash-detailing-section {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+  color: #1e293b !important;
+}
+
+.light-theme #pricing-wash-detailing-section h2,
+.light-theme #pricing-wash-detailing-section h3,
+.light-theme #pricing-wash-detailing-section h4 {
+  color: #0f172a !important;
+}
+
+.light-theme #pricing-wash-detailing-section .bg-slate-950 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 10px 15px -3px rgba(0, 0, 0, 0.03) !important;
+}
+
+.light-theme #pricing-wash-detailing-section .bg-slate-900,
+.light-theme #pricing-wash-detailing-section .bg-slate-900\/80 {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+}
+
+.light-theme #pricing-wash-detailing-section .text-white {
+  color: #0f172a !important;
+}
+
+.light-theme #pricing-wash-detailing-section .text-slate-350,
+.light-theme #pricing-wash-detailing-section .text-slate-300 {
+  color: #334155 !important;
+}
+
+.light-theme #pricing-wash-detailing-section .text-slate-400 {
+  color: #475569 !important;
+}
+
+.light-theme #pricing-wash-detailing-section table tr:hover {
+  background-color: #f8fafc !important;
+}
+
+.light-theme #pricing-wash-detailing-section table th {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light-theme #pricing-wash-detailing-section table td {
+  border-color: #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+.light-theme #pricing-wash-detailing-section select,
+.light-theme #pricing-wash-detailing-section input {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+.light-theme #pricing-wash-detailing-section .border-slate-850 {
+  border-color: #cbd5e1 !important;
+}
+
+

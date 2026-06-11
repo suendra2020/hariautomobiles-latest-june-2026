@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build outputs
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Netlify
+.netlify
+.cache
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
