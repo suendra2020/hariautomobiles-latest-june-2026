@@ -6,6 +6,8 @@
 import React, { useEffect, useState } from "react";
 import HariLogo from "./HariLogo";
 import { Sparkles } from "lucide-react";
+import HariLightLogo from "../assets/images/hari-light.png";
+import HariDarkLogo from "../assets/images/hari-dark.png";
 
 interface SplashScreenProps {
   onComplete: () => void;
@@ -116,7 +118,11 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
           {/* Centerpiece Branding Logo inside the ring */}
           <div className="absolute inset-8 flex items-center justify-center z-10 transition-transform duration-500 scale-102 group">
             {/* <HariLogo className="h-40 w-auto" showSlogan={false} lightText={true} /> */}
-            <img src="../src/assets/images/hari-light.png" alt="Hari Automobiles Logo" className="h-40 w-auto splash-logo" />
+            <img
+                       src={HariLightLogo}
+                       alt="Hari Automobiles Logo"
+                       className="h-20 w-auto transition-all duration-300"
+                     />
           </div>
         </div>
 

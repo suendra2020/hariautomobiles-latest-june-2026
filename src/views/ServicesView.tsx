@@ -237,7 +237,7 @@ export default function ServicesView({ onOpenBooking, selectedServiceId, setSele
                       </div>
                       <button
                         onClick={() => handleBookService(srv.title)}
-                        className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-6 py-3 font-sans text-xs font-bold text-slate-950 hover:from-amber-400 hover:to-amber-500 shadow-md transition cursor-pointer"
+                        className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-6 py-3 font-sans text-xs font-bold text-white-950 hover:from-amber-400 hover:to-amber-500 shadow-md transition cursor-pointer"
                       >
                         <Wrench className="h-4 w-4" />
                         <span>Schedule {srv.title}</span>

@@ -13,6 +13,8 @@ import { SERVICES, BRANDS, REVIEWS, SEO_DATA, BANGALORE_AREAS } from "../data";
 import HariLogo from "../components/HariLogo";
 import InstagramReelsSection from "../components/InstagramReelsSection";
 import Hls from "hls.js";
+import fiat from "../assets/images/fiat-1.jpg";
+import HariDarkLogo from "../assets/images/hari-dark.png";
 
 interface HomeViewProps {
   onNavigate: (view: string) => void;
@@ -478,7 +480,7 @@ export default function HomeView({ onNavigate, onOpenBooking, onSelectService }:
       name: "Jeep SUV Motor Tuning",
       brand: "Jeep 4x4 Offroad Care",
       tag: "Engine Overhauls",
-      image: "../src/assets/images/fiat-1.jpg",
+      image: fiat,
       desc: "Dedicated 4x4 transmission diagnostics, complete suspension checking, electrical control, and original parts mapping."
     },
     {
