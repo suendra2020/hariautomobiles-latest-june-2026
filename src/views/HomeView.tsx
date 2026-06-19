@@ -868,7 +868,7 @@ export default function HomeView({ onNavigate, onOpenBooking, onSelectService }:
 
           </div>
         </div>
-      </section>n>
+      </section>
 
       {/* 3. About Preview & Mission Section */}
       <section id="about-preview" className="py-20 px-4 md:px-8 bg-slate-950">
