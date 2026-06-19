@@ -15,7 +15,7 @@ import InstagramReelsSection from "../components/InstagramReelsSection";
 import Hls from "hls.js";
 import fiat from "../assets/images/fiat-1.jpg";
 import HariDarkLogo from "../assets/images/hari-dark.png";
-
+import harivideo from "../assets/images/hari.mp4";
 interface HomeViewProps {
   onNavigate: (view: string) => void;
   onOpenBooking: () => void;
@@ -738,16 +738,19 @@ export default function HomeView({ onNavigate, onOpenBooking, onSelectService }:
                 </div>
               ) : (
                 /* YouTube Video Walkthrough */
-                <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden bg-black border border-slate-850 shadow-2xl">
-                  <iframe
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/R_OcxWAsY98?autoplay=0&mute=1&rel=0"
-                    title="Hari Automobiles Premium Workshop Walkthrough"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
-                </div>
+                             <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden bg-black border border-slate-850 shadow-2xl">
+  <video
+    className="w-full h-full object-cover"
+    controls
+    autoPlay
+    muted
+    loop
+    playsInline
+  >
+    <source src={harivideo} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
               )}
 
             </div>
@@ -816,7 +819,7 @@ export default function HomeView({ onNavigate, onOpenBooking, onSelectService }:
             </div>
 
             {/* Right Side: 3 High Fidelity Counting Milestones */}
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+           {/* <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
               
               {/* Counter 1: Happy Clients */}
               <div className="p-5 rounded-2xl bg-slate-950/40 border border-slate-900 flex flex-col justify-between hover:border-slate-800 transition duration-300">
@@ -860,7 +863,63 @@ export default function HomeView({ onNavigate, onOpenBooking, onSelectService }:
                 </p>
               </div>
 
-            </div>
+            {/* </div> */}
+            {/* Right Column: YouTube Video Showcase */}
+<div className="lg:col-span-5 relative w-full">
+  <div className="relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-900 shadow-2xl">
+    
+    {/* Video Header */}
+    <div className="flex items-center justify-between border-b border-slate-800 bg-slate-950 px-4 py-3">
+      <div>
+        <p className="text-xs font-bold uppercase tracking-wider text-rose-500">
+          Workshop Showcase
+        </p>
+        <h3 className="text-sm font-semibold text-white">
+          Hari Automobiles Bangalore
+        </h3>
+      </div>
+
+      <div className="flex items-center gap-2">
+        <span className="h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>
+        <span className="text-xs text-slate-400">Live Showcase</span>
+      </div>
+    </div>
+
+    {/* YouTube Video */}
+    <div className="aspect-video w-full">
+     <iframe
+  className="w-full h-full"
+  src="https://www.youtube.com/embed/IXFFhtD8lhk?autoplay=1&mute=1&loop=1&playlist=IXFFhtD8lhk&controls=0&rel=0"
+  title="Hari Automobiles Workshop"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+/>
+    </div>
+
+    {/* Bottom Info */}
+    <div className="border-t border-slate-800 bg-slate-950 p-4">
+      <div className="flex items-center justify-between">
+        <div>
+          <h4 className="font-semibold text-white">
+            Expert Fiat & Jeep Specialists
+          </h4>
+          <p className="mt-1 text-sm text-slate-400">
+            Watch our workshop, diagnostics, repairs, detailing and service process.
+          </p>
+        </div>
+
+        <a
+          href="https://youtu.be/IXFFhtD8lhk"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-lg bg-rose-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-rose-700"
+        >
+          Watch on YouTube
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
           </div>
         </div>
